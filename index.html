@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mapa de Mí Mismo - Juan David</title>
+  <link rel="shortcut icon" href="./assets/otter.png">
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="script.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Guides:wght@400..700&family=Gloria+Hallelujah&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <main>
+    <div class="planet neptune">
+      <span>Lo que Quiero Aprender</span>
+      <div class="image-container">
+        <img src="./assets/neptune.png" alt="Neptune">
+      </div>
+    </div>
+    <div class="planet saturn">
+      <span>Mis Valores</span>
+      <div class="image-container">
+        <img src="./assets/saturn.png" alt="Saturn">
+      </div>
+    </div>
+    <div class="planet mars">
+      <span>Mi Pasión</span>
+      <div class="image-container">
+        <img src="./assets/mars.png" alt="Mars">
+      </div>
+    </div>
+    <div class="planet venus">
+      <span>Mi Estilo</span>
+      <div class="image-container">
+        <img src="./assets/venus.png" alt="Venus" srcset="">
+      </div>
+    </div>
+    <div class="planet sun">
+      <span>Mi Esencia</span>
+      <div class="image-container">
+        <img src="./assets/sun.png" alt="Sun">
+      </div>
+    </div>
+    <div class="planet mercury">
+      <span>Mi Agilidad Mental</span>
+      <div class="image-container">
+        <img src="./assets/mercury.png" alt="Mercury">
+      </div>
+    </div>
+    <div class="earth-moon">
+      <div class="planet earth-container">
+        <span>Mi Hogar</span>
+        <div class="image-container earth">
+          <img src="./assets/earth.png" alt="Earth">
+        </div>
+      </div>
+      <div class="planet moon-container">
+        <span>Mi Madre</span>
+        <div class="image-container moon">
+          <img src="./assets/moon.png" alt="Moon">
+        </div>
+      </div>
+    </div>
+    <div class="planet jupiter">
+      <span>Mis Aspiraciones</span>
+      <div class="image-container">
+        <img src="./assets/jupiter.png" alt="Jupiter" srcset="">
+      </div>
+    </div>
+    <div class="planet uranus">
+      <span>Mi Innovación</span>
+      <div class="image-container">
+        <img src="./assets/uranus.png" alt="Uranus" srcset="">
+      </div>
+    </div>
+  </main>
+
+  <div id="planet-info" class="planet-info">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 id="planet-title">Planet Information</h2>
+        <button class="close-btn" id="close-modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="planet-image">
+          <img id="modal-planet-image" src="" alt="">
+        </div>
+        <div class="planet-description">
+          <p id="planet-description"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
