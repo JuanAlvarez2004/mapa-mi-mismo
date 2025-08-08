@@ -59,24 +59,37 @@ const planetData = {
 };
 
 planets.forEach(planet => {
+  // Click event
   planet.addEventListener('click', () => {
-    // Determinar qué planeta se clickeó
-    let planetClass;
-    
-    if (planet.classList.contains('earth-container')) {
-      planetClass = 'earth';
-    } else if (planet.classList.contains('moon-container')) {
-      planetClass = 'moon';
-    } else {
-      // Para los otros planetas, tomar la segunda clase
-      planetClass = Array.from(planet.classList)[1];
-    }
+    handlePlanetInteraction(planet);
+  });
 
-    if (planetClass && planetData[planetClass]) {
-      showModal(planetClass);
+  // Keyboard events
+  planet.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      handlePlanetInteraction(planet);
     }
   });
 });
+
+function handlePlanetInteraction(planet) {
+  // Determinar qué planeta se clickeó
+  let planetClass;
+  
+  if (planet.classList.contains('earth-container')) {
+    planetClass = 'earth';
+  } else if (planet.classList.contains('moon-container')) {
+    planetClass = 'moon';
+  } else {
+    // Para los otros planetas, tomar la segunda clase
+    planetClass = Array.from(planet.classList)[1];
+  }
+
+  if (planetClass && planetData[planetClass]) {
+    showModal(planetClass);
+  }
+}
 
 function showModal(planetKey) {
   const planet = planetData[planetKey];
